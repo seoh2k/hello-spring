@@ -11,9 +11,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class MemoryMemberRepositoryTest {
     MemoryMemberRepository repository = new MemoryMemberRepository();
 
-    @AfterEach
+    @AfterEach // 각 테스트가 종료도리 때마다 기능 실행
     public void afterEach(){
-        repository.clearStore();
+        repository.clearStore(); // 메모리 DB에 저장된 데이터 삭제
     }
 
     @Test
